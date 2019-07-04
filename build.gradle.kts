@@ -12,7 +12,7 @@ repositories {
     jcenter()
 }
 
-val junitJupiterVersion = "5.2.0"
+val junitVersion = "5.2.0"
 val spekVersion = "2.0.5"
 val kluentVersion = "1.49"
 val mockitoKotlinVersion = "2.1.0"
@@ -21,8 +21,8 @@ dependencies {
     implementation(kotlin("reflect"))
 
     testImplementation(kotlin("test"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 
     testImplementation("org.spekframework.spek2:spek-dsl-jvm:$spekVersion")
     testRuntimeOnly("org.spekframework.spek2:spek-runner-junit5:$spekVersion")
