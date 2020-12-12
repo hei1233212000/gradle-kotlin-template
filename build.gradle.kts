@@ -6,7 +6,7 @@ val kluentVersion: String by project
 val mockitoKotlinVersion: String by project
 
 plugins {
-    kotlin("jvm") version "1.3.31"
+    kotlin("jvm") version "1.4.21"
     jacoco
 }
 
