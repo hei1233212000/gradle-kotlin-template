@@ -1,5 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val junitVersion: String by project
+val spekVersion: String by project
+val kluentVersion: String by project
+val mockitoKotlinVersion: String by project
+
 plugins {
     kotlin("jvm") version "1.3.31"
     jacoco
@@ -12,10 +17,6 @@ repositories {
     jcenter()
 }
 
-val junitVersion = "5.2.0"
-val spekVersion = "2.0.5"
-val kluentVersion = "1.49"
-val mockitoKotlinVersion = "2.1.0"
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
