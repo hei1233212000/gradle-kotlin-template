@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val junitVersion: String by project
 val spekVersion: String by project
 val kluentVersion: String by project
-val mockitoKotlinVersion: String by project
+val mockkVersion: String by project
 
 plugins {
     kotlin("jvm") version "1.4.21"
@@ -29,7 +29,7 @@ dependencies {
     testRuntimeOnly("org.spekframework.spek2:spek-runner-junit5:$spekVersion")
 
     testImplementation("org.amshove.kluent:kluent:$kluentVersion")
-    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion")
+    testImplementation("io.mockk:mockk:$mockkVersion")
 }
 
 tasks.withType<KotlinCompile> {

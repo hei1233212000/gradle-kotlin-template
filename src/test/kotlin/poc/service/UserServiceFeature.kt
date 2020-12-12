@@ -1,7 +1,7 @@
 package poc.service
 
-import com.nhaarman.mockitokotlin2.doReturn
-import com.nhaarman.mockitokotlin2.mock
+import io.mockk.every
+import io.mockk.mockk
 import org.amshove.kluent.`should be equal to`
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.gherkin.Feature
@@ -23,8 +23,8 @@ object UserServiceFeature : Spek({
                     id = userId,
                     name = userName
                 )
-                userRepository = mock {
-                    on { findById(userId) } doReturn user
+                userRepository = mockk() {
+                    every { findById(userId) } returns user
                 }
             }
 
